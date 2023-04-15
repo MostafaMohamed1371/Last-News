@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "413283631022",
+    "project_id": "last-news-dac0b",
+    "storage_bucket": "last-news-dac0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413283631022:android:c2ab485ebe3802048f123f",
+        "android_client_info": {
+          "package_name": "com.example.last_news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413283631022-lqn3o454df0dfmi3kilj2g8sd0pgsl4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoFI5kXiaZvdn64IkKayFA4lrel0aD7Vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413283631022-lqn3o454df0dfmi3kilj2g8sd0pgsl4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_fragment"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/articalFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.ArticalFragment"
+        android:label="fragment_artical"
+        tools:layout="@layout/fragment_artical" >
+        <argument
+            android:name="artical"
+            app:argType="com.example.last_news.ui.fragments.models.retrofit.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/breackingFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.BreackingFragment"
+        android:label="fragment_breacking"
+        tools:layout="@layout/fragment_breacking" >
+        <action
+            android:id="@+id/action_breackingFragment_to_articalFragment"
+            app:destination="@id/articalFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+        <action
+            android:id="@+id/action_breackingFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_breackingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/breackingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_breackingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_articalFragment"
+            app:destination="@id/articalFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_articalFragment"
+            app:destination="@id/articalFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_breackingFragment"
+            app:destination="@id/breackingFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_forget_PasswordFragment"
+            app:destination="@id/forget_PasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_breackingFragment"
+            app:destination="@id/breackingFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_breackingFragment"
+            app:destination="@id/breackingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forget_PasswordFragment"
+        android:name="com.example.last_news.ui.fragments.fragment.Forget_PasswordFragment"
+        android:label="fragment_forget__password"
+        tools:layout="@layout/fragment_forget__password" />
+</navigation>
